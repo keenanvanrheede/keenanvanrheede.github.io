@@ -51,6 +51,41 @@
             background: #94d2bd;
             transform: scale(1.1);
         }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0a9396;
+            min-width: 160px;
+            z-index: 1;
+            border-radius: 8px;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Style the dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #94d2bd;
+        }
+
         .content {
             width: 80%;
             max-width: 80%;
@@ -171,11 +206,16 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="business.html">My Business</a>
-        <a href="backabuddy.html">BackaBuddy</a>
-        <a href="fundraisers.html">Fundraisers</a>
+        <div class="dropdown">
+            <a href="javascript:void(0)">Menu</a>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="business.html">My Business</a>
+                <a href="backabuddy.html">BackaBuddy</a>
+                <a href="fundraisers.html">Fundraisers</a>
+            </div>
+        </div>
     </div>
     <div class="content">
         <img src="keenan.jpeg" alt="Keenan">
