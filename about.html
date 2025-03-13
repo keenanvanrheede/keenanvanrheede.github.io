@@ -52,26 +52,27 @@
             transform: scale(1.1);
         }
         .content {
-            width: 80%; /* Content now covers 80% of the screen width */
-            max-width: 80%; /* Ensures the content doesn't exceed 80% */
+            width: 80%;
+            max-width: 80%;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 15px;
             padding: 30px;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
-            margin-top: 20px; /* Adds some spacing from navbar */
+            margin-top: 20px;
             line-height: 1.8;
-            min-height: 100vh; /* Ensures the content takes up at least the full height of the viewport */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            text-align: left; /* Ensures the text is aligned to the left */
+            text-align: left;
+            padding-top: 120px; /* Added padding-top to give space for the navbar */
         }
         .content h1 {
             margin-bottom: 20px;
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
-            color: #ffffff; /* White for the main heading */
+            color: #ffffff;
             text-align: center;
             letter-spacing: 1px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -81,7 +82,7 @@
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             font-size: 2rem;
-            color: #ffcc00; /* Gold color for subheadings */
+            color: #ffcc00;
             text-align: left;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -95,22 +96,76 @@
             color: #f0f0f0;
         }
         .content img {
-            max-width: 50%; /* Image now takes up 50% of its container's width */
+            width: 100%; /* Make image responsive */
+            max-width: 50%; /* Limit to 50% of container width */
             height: auto;
             border-radius: 10px;
             margin-top: 20px;
             margin-bottom: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            display: block; /* Ensures the image is block-level */
-            margin-left: auto; /* Centers the image */
-            margin-right: auto; /* Centers the image */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .content section {
             margin-bottom: 30px;
         }
         .content p span {
             font-weight: 600;
-            color: #ffcc00; /* Gold color for important text */
+            color: #ffcc00;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+            .navbar a {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+            .content {
+                width: 90%;
+                padding: 15px;
+                padding-top: 100px; /* Reduced top padding for smaller screens */
+            }
+            .content h1 {
+                font-size: 2.5rem;
+            }
+            .content h2, .content h3 {
+                font-size: 1.8rem;
+            }
+            .content p {
+                font-size: 1rem;
+            }
+            .content img {
+                max-width: 80%; /* Resize image for smaller screens */
+            }
+        }
+
+        /* For very small screens */
+        @media screen and (max-width: 480px) {
+            .navbar a {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+            .content {
+                padding-top: 80px; /* Further reduce top padding for very small screens */
+            }
+            .content h1 {
+                font-size: 2rem;
+            }
+            .content h2, .content h3 {
+                font-size: 1.5rem;
+            }
+            .content p {
+                font-size: 0.9rem;
+            }
+            .content img {
+                max-width: 90%; /* Further reduce image size */
+            }
         }
     </style>
 </head>
